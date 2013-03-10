@@ -1,19 +1,10 @@
 var express = require('express');
-var mongo = require('mongodb');
-var Db = require('mongodb').Db;
-var Server = require('mongodb').Server;
+var mongo = require('mongoskin');
 
-var mongoUri = process.env.MONGOLAB_URI || 
-  process.env.MONGOHQ_URL || 
-  'mongodb://localhost/mydb'; 
 
-client = new Db('test', new Server('127.0.0.1', 27017, {}));
 
-var listAllData = function(err, collection) {
-    collection.find().toArray(function(err, results) {
-        console.log(results);
-    });
-}
+
+
 
 
 
@@ -24,13 +15,18 @@ app.get('/', function(request, response) {
 });
 
 app.get('/read', function(request, response) {
-  response.send('read from db');
- 
+  
+  var rslt = ' R : ';
 
-    client.collection('things', listAllData);
+   var db = require('mongoskin').db('localhost:27017/test');
+ 
+ db.collection('things').find().toArray(function(err, result) {
+    if (err) throw err;
+    rslt += result;
+    console.log(result);
+});
 
- 
- 
+response.send('results ' + rslt);
 
 });
 
