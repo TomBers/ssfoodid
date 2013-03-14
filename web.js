@@ -11,7 +11,7 @@ var mongo = require('mongoskin');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.send('Hello Andy');
 });
 
 app.get('/read', function(request, response) {
