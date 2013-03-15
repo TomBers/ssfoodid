@@ -1,6 +1,6 @@
 var express = require('express');
 
-var request = require("request");
+
 
 
 
@@ -13,11 +13,7 @@ app.get('/', function(request, res) {
   res.send('Hello Andy');
 });
 
-app.get('/readMongoDB', function(request, res) {
 
-
-
-});
 
 
 
