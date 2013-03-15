@@ -13,16 +13,7 @@ app.get('/', function(request, res) {
   res.send('Hello Andy');
 });
 
-app.get('/readMongoDB', function(req, res) {
 
-request('https://api.mongolab.com/api/1/databases/heroku_app13153679/collections?apiKey=TS3DbEeRXGUBrrX3It--_vLWIzZN5SB2', function(error, res, body) {
-
-res.end(body);
-
-});
-
-
-});
 
 
 
