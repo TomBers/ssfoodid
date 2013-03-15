@@ -14,6 +14,19 @@ app.get('/', function(request, response) {
   response.send('Hello Andy');
 });
 
+app.get('/readMongoDB', function(request, response) {
+var request = require("request");
+
+request('https://api.mongolab.com/api/1/databases/heroku_app13153679/collections?apiKey=TS3DbEeRXGUBrrX3It--_vLWIzZN5SB2', function(error, response, body) {
+
+var dat = JSON.parse(body);
+request(purl, function(error, response, body) {
+
+res.end(body);
+}
+
+});
+
 app.get('/read', function(request, response) {
   
   var rslt = ' R : ';
