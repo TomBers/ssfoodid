@@ -79,7 +79,7 @@ console.log('into upload');
     // removing footer '\r\n'--boundary--\r\n' = (boundary.length + 8)
     body = body.slice(0, body.length - (boundary.length + 8))
     console.log('final file size: ' + body.length);
-    fs.writeFileSync('files/' + filename, body, 'binary');
+    fs.writeFileSync(__dirname +'/files/' + filename, body, 'binary');
     console.log('done');
     res.redirect('back');
   })
