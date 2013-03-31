@@ -29,6 +29,7 @@ res.end(body);
 
 
 app.post('/upload', function(req, res){
+console.log('into upload');
   var body = '';
   var header = '';
   var content_type = req.headers['content-type'];
