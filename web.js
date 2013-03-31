@@ -87,7 +87,7 @@ console.log('into upload');
 
 app.get('/upload', function(req, res){
 console.log('GET for upload');
- res.send('<form method="post" action="/testy" enctype="multipart/form-data">'
+ res.send('<form method="post" action="/upload" enctype="multipart/form-data">'
            + '<p>Image: <input type="file" name="test" /></p>'
            + '<p><input type="submit" value="Upload" /></p>'
            + '</form>');
