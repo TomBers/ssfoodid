@@ -34,7 +34,7 @@ console.log('into upload');
   var header = '';
   var content_type = req.headers['content-type'];
   var fileName = req.headers['fileName'];
-  console.log('headers are'+req.headers);
+  console.log('headers are'+req.headers.toString());
  
   
   var boundary = content_type.split('; ')[1].split('=')[1];
