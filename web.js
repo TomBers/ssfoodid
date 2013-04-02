@@ -33,8 +33,11 @@ console.log('into upload');
   var body = '';
   var header = '';
   var content_type = req.headers['content-type'];
-  var fileName = req.headers['fileName'];
+  var fileName = req.headers['options'];
   console.log('file name is :'+fileName);
+  
+  var value1 = req.headers['value1'];
+  console.log('value 1 is:'+value1);
   var boundary = content_type.split('; ')[1].split('=')[1];
   var content_length = parseInt(req.headers['content-length']);
   var headerFlag = true;
