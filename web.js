@@ -37,6 +37,12 @@ res.end(body);
 
 app.get('/s3test', function(request,res){
 
+
+amazonS3.ListBuckets(function(err, data) {
+    console.log(err);
+    console.log(data);
+});
+
 storage.PutObject({
   BucketName:    process.env.BUCKET_NAME,
   ObjectName:    'helloworld.txt',
