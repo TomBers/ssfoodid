@@ -1,10 +1,11 @@
 var express = require('express');
 var fs = require('fs');
-var S3 = require("awssum").load("amazon/s3").S3;
+var amazonS3 = require('awssum-amazon-s3');
+//.load("amazon/s3").S3;
 
-var storage = new S3({
-  accessKeyId:     process.env.BUCKET_ACCESS_KEY, 
-  secretAccessKey: process.env.BUCKET_SECRET_KEY
+var storage = new amazonS3.S3({
+  'accessKeyId':     process.env.BUCKET_ACCESS_KEY, 
+  'secretAccessKey': process.env.BUCKET_SECRET_KEY
 });
 
 
