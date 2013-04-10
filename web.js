@@ -41,8 +41,8 @@ app.get('/s3test', function(request,res){
 storage.PutObject({
   BucketName:    process.env.BUCKET_NAME,
   ObjectName:    'helloworldmonkey.txt',
-  ContentLength: 1,
-  Body:          'h'
+  ContentLength: 18,
+  Body:          '123456789123456789'
 }, function(err, data) {
   console.log('err', err);
   console.log('data', data);
