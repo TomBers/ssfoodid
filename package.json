@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "2.5.x",
-    "awssum":"1.0.0",
     "awssum-amazon-s3":"1.2.4"    
   },
   "engines": {
