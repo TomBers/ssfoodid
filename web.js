@@ -1,5 +1,11 @@
 var express = require('express');
 var fs = require('fs');
+var S3 = require("awssum").load("amazon/s3").S3;
+
+var storage = new S3({
+  accessKeyId:     process.env.BUCKET_ACCESS_KEY, 
+  secretAccessKey: process.env.BUCKET_SECRET_KEY
+});
 
 
 
@@ -26,6 +32,22 @@ res.end(body);
   
 });
 
+
+app.get('/s3test', function(request,res){
+
+storage.PutObject({
+  BucketName:    process.env.BUCKET_NAME,
+  ObjectName:    'helloworld.txt',
+  ContentLength: 14,
+  Body:          'Hello World!\n'
+}, function(err, data) {
+  console.log('err', err);
+  console.log('data', data);
+});
+
+
+
+}
 
 
 app.post('/upload', function(req, res){
