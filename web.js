@@ -40,7 +40,7 @@ app.get('/s3test', function(request,res){
 
 storage.PutObject({
   BucketName:    process.env.BUCKET_NAME,
-  ObjectName:    'helloworld.txt',
+  ObjectName:    'helloworldmonkey.txt',
   ContentLength: 14,
   Body:          'Hello World!\n'
 }, function(err, data) {
