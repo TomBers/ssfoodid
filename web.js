@@ -6,7 +6,7 @@ var amazonS3 = require('awssum-amazon-s3');
 var storage = new amazonS3.S3({
   'accessKeyId':     process.env.BUCKET_ACCESS_KEY, 
   'secretAccessKey': process.env.BUCKET_SECRET_KEY,
-  'region':amazonS3.US_WEST_2
+  'region':amazonS3.US_EAST_1
 });
 
 
