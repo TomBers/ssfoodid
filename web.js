@@ -47,7 +47,7 @@ storage.PutObject({
 
 
 
-)};
+});
 
 
 app.post('/upload', function(req, res){
