@@ -18,7 +18,7 @@ var storage = new amazonS3.S3({
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, res) {
-  res.send('<iframe src="http://javascript.info"></iframe>');
+  res.send('<iframe src="http://9183df9a.dotests.com/"></iframe>');
   //res.send('Hello Andy, hi Thom');
 
 });
