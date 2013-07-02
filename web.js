@@ -18,7 +18,7 @@ var storage = new amazonS3.S3({
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, res) {
-  res.send('Hello Andy');
+  res.send('Hello Andy, hi Tom');
 });
 
 app.get('/read', function(req, res) {
