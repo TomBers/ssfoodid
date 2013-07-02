@@ -18,12 +18,8 @@ var storage = new amazonS3.S3({
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, res) {
-  res.send('Hello Andy, hi Thom');
-    ifrm = document.createElement("IFRAME"); 
-   ifrm.setAttribute("src", "http://developerfusion.com/"); 
-   ifrm.style.width = 640+"px"; 
-   ifrm.style.height = 480+"px"; 
-   document.body.appendChild(ifrm);  
+  res.send('<iframe src="http://javascript.info"></iframe>');
+  //res.send('Hello Andy, hi Thom');
 
 });
 
