@@ -19,7 +19,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, res) {
   //res.send('Hello Andy, hi Thom');
-  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.writeHead(200, {'Content-Type': 'text/html'});
   res.end(index);
 
 });
