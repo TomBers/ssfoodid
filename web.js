@@ -10,7 +10,8 @@ var storage = new amazonS3.S3({
 });
 
 
-var index = fs.readFileSync('index.html');
+var index = fs.readFileSync('pic-fit_index.html');
+var piccard = fs.readFileSync('pic-card_index.html');
 
 
 
@@ -23,6 +24,14 @@ app.get('/', function(request, res) {
   res.end(index);
 
 });
+
+app.get('/pic-card', function(request, res) {
+  //res.send('Hello Andy, hi Thom');
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end(piccard);
+
+});
+
 
 app.get('/read', function(req, res) {
   
