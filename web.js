@@ -10,7 +10,7 @@ var storage = new amazonS3.S3({
 });
 
 
-
+var index = fs.readFileSync('index.html');
 
 
 
@@ -18,7 +18,9 @@ var storage = new amazonS3.S3({
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, res) {
-  res.send('Hello Andy, hi Thom');
+  //res.send('Hello Andy, hi Thom');
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end(index);
 
 });
 
